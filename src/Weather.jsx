@@ -22,6 +22,8 @@ export const Weather = () => {
 
 
   return (
+
+    <>
    <div className='first'>
     
 <form onSubmit={handlesubmit}  class="max-w-md mx-auto p-5">   
@@ -36,6 +38,8 @@ export const Weather = () => {
         <button type="submit" class="text-white absolute end-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button>
     </div>
 </form>
+{data&&
+<div>
 <div className='flex justify-center pl-96 flex-col mt-40 '>
 <div  className=' text-[35px] font-bold text-white'>{data?.name}</div>
 <div className='text-[30px] font-bold text-white'>{data?.main?.temp}</div>
@@ -56,11 +60,15 @@ export const Weather = () => {
     <p>Winds</p>
 
     </div> 
-    
+
 </div>
 
 
 
    </div>
+}
+   </div>
+
+</>
   )
 }
